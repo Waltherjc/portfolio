@@ -3,7 +3,6 @@ import Base from '../layouts/Base.astro';
 import SectionHead from '../components/SectionHead.astro';
 import { site } from '../data/site';
 import { img } from '../lib/url';
-import { ratioOf } from '../data/imageSizes';
 ---
 
 <Base
@@ -18,15 +17,18 @@ import { ratioOf } from '../data/imageSizes';
         {site.about.map((p) => <p>{p}</p>)}
       </div>
     </div>
-    <div class="portrait">
+    <figure class="portrait">
       <img
         src={img(site.headshot)}
         alt={`Portrait of ${site.name}`}
-        style={`aspect-ratio:${ratioOf(site.headshot, 0.8)}`}
         fetchpriority="high"
         decoding="async"
       />
-    </div>
+      <figcaption class="portrait__caption">
+        <span class="portrait__field">DRAWN BY</span>
+        <span class="portrait__value">{site.name}</span>
+      </figcaption>
+    </figure>
   </div>
 
   <section class="sheet sheet--wide section">
