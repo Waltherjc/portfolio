@@ -25,9 +25,9 @@ export const site = {
   ],
 
   about: [
-    'I am a sophomore at Vanderbilt University studying Mechanical Engineering, with minors in Innovation & Design Strategy, Digital Fabrication, and Engineering Management. What pulls all of that together is automotive engineering.',
-    'On VU Motorsports I work on car design and metal fabrication, aiming at the Formula SAE internal combustion competition in Michigan each year. Outside the shop I play for Vanderbilt club baseball, build assistive technology with Tikkun Olam Makers, and lead a freshman orientation group.',
-    'The long-term goal is straightforward: work for a racing team and design a car that wins a championship.',
+    'I am a sophomore at Vanderbilt University studying Mechanical Engineering, with minors in Innovation & Design Strategy, Digital Fabrication, and Engineering Management. My academic journey is driven by my interest in automotive engineering.',
+    'As a member of VU Motorsports, I work on car design and metal fabrication with the end goal of successfully competing at the Formula SAE internal combustion competition in Michigan annually. When I am not studying, you can find me playing baseball for the club team at Vanderbilt, being involved with Tikkun Olam Makers (TOM): Vanderbilt to provide assistive technology for those with physical disabilities, leading a freshman orientation group, or playing sports with my friends.',
+    'My overall goal is to use what I have learned to work for a racing team and design a championship winning car.',
   ],
 
   education: {
