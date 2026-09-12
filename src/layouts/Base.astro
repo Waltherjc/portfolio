@@ -1,0 +1,100 @@
+---
+import '../styles/global.css';
+import { url, img } from '../lib/url';
+import { site } from '../data/site';
+
+const { title, description, ogImage } = Astro.props;
+
+const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — Engineering Portfolio`;
+const desc =
+  description ??
+  'Engineering portfolio of John Walther — mechanical engineering at Vanderbilt University, Formula SAE, CAD and metal fabrication.';
+
+const path = Astro.url.pathname.replace(/\/$/, '');
+const isWork = path.includes('/portfolio');
+const isAbout = path.endsWith('/about');
+
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://waltherjc.github.io');
+const year = new Date().getFullYear();
+const zones = ['A', 'B', 'C', 'D'];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#F4F5F3" />
+    <link rel="icon" href={img(site.headshotSquare)} />
+    <link rel="sitemap" href={url('sitemap-index.xml')} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+    {ogImage && <meta property="og:image" content={new URL(ogImage, canonical)} />}
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="frame" aria-hidden="true">
+      {zones.map((z, i) => <span style={`top:${12 + i * 22}%`}>{z}</span>)}
+    </div>
+
+    <div class="page">
+      <a class="skip-link" href="#main">Skip to content</a>
+
+      <header class="nav">
+        <div class="sheet sheet--wide nav__inner">
+          <a class="nav__brand" href={url('/')}>
+            <span class="nav__name">{site.name}</span>
+            <span class="nav__role">Engineering portfolio</span>
+          </a>
+          <nav class="nav__links" aria-label="Main">
+            <a class="nav__link" href={url('portfolio')} aria-current={isWork ? 'page' : undefined}>
+              Work
+            </a>
+            <a class="nav__link" href={url('about')} aria-current={isAbout ? 'page' : undefined}>
+              About
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="main">
+        <slot />
+      </main>
+
+      <footer class="footer">
+        <div class="sheet sheet--wide footer__inner">
+          <div>
+            <div class="footer__name">{site.name}</div>
+            <p class="footer__line">{site.role} · Vanderbilt University</p>
+          </div>
+          <div>
+            {
+              site.contact.length > 0 && (
+                <div class="footer__contact">
+                  {site.contact.map((c) => (
+                    <a href={c.href}>{c.label}</a>
+                  ))}
+                </div>
+              )
+            }
+            <p class="footer__line">© {year}</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

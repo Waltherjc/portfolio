@@ -1,0 +1,84 @@
+---
+title: Formula Student Suspension
+summary: Front double-wishbone suspension designed around purchased hubs, calipers and knuckles — four iterations before everything cleared.
+order: 4
+hero: Suspension CAD Complete.jpg
+tags:
+  - Fusion 360
+  - Welding
+  - Plasma CNC
+  - Vehicle dynamics
+meta:
+  - field: TOOLS
+    value: Autodesk Fusion, MIG welding, plasma CNC
+  - field: SCOPE
+    value: Design, simulation, fabrication
+---
+
+import Figure from '../../components/Figure.astro';
+import FileRow from '../../components/FileRow.astro';
+
+## Introduction
+
+The goal was to design and assemble the front suspension for a high school Formula Student car. It took several iterations to make the design fit the wheel hubs, brake calipers and steering knuckles that had already been bought.
+
+Design was done in Autodesk Fusion. The suspension was then built using several manufacturing processes, the purchased components bolted on, and the whole assembly bolted to the chassis.
+
+## Four iterations
+
+Iterations 1 and 2 did not leave the brake calipers and wheel hubs their full range of motion. Iteration 3 fixed that, but the shocks and steering knuckles still would not fit. Iteration 4 adjusted clearances so the shocks and knuckles fit alongside everything else — and simulation then showed the design would put too much force into the frame, so the supporting frame had to be modified to carry it.
+
+<Figure
+  n={1}
+  caption="Iterations 1 and 2 — insufficient clearance for calipers and hubs"
+  images={[
+    { src: 'Suspension CAD Iter 1.jpg', alt: 'CAD of suspension iteration 1' },
+    { src: 'Suspension CAD Iter 2.jpg', alt: 'CAD of suspension iteration 2' },
+  ]}
+/>
+
+<Figure
+  n={2}
+  caption="Iterations 3 and 4 — clearances resolved, arm complete"
+  images={[
+    { src: 'Suspension CAD Iter 3.jpg', alt: 'CAD of suspension iteration 3' },
+    { src: 'Suspension CAD Arm Complete.jpg', alt: 'Completed suspension arm in CAD' },
+  ]}
+/>
+
+## How it works
+
+The suspension uses a top arm and a bottom arm, both bolted to the frame so they pivot vertically. Each wheel has its own corner, so each responds to the road independently. The wheel hub sits between the two arms, enclosed in a machined box that gives the bolts something solid to land in.
+
+Every arm-to-upright connection is a ball-and-socket joint, one half on top of the box and the other on a plate welded to the arm. That lets the wheels steer left and right while the suspension still travels vertically. The box also carries a short arm for the steering column. The bottom arm gets an extra cross member to hold the shock, whose other end mounts to the frame between the two upper arm pickups.
+
+<Figure
+  n={3}
+  caption="Complete assembly"
+  images={[{ src: 'Suspension CAD Complete.jpg', alt: 'Complete suspension assembly in CAD' }]}
+/>
+
+## Assembly
+
+The arms are 1 in circular tube. I traced the arm shape onto paper from the CAD, cut the tube to those dimensions on a chop saw, and marked the midpoint to locate the bend. The tube ends were then cut to angle so the tube meets the frame perpendicular at the pickup. Bends were MIG welded to hold, and the purchased frame-to-arm connection was welded on.
+
+<Figure
+  n={4}
+  caption="Paper layout used to set arm geometry"
+  images={[{ src: 'Suspension Arm Outline.jpg', alt: 'Paper outline used to lay out a suspension arm' }]}
+/>
+
+The rest of the suspension was cut on a plasma CNC from the Fusion files: the frame base, four long tabs connecting the arms to the base, two small tabs for the shock mount, the plates welded to the ends of both arms, the shock plate on the bottom arm, and the wheel hub box. The base includes small holes so the tabs locate properly and the welds have more to bite on. Everything was MIG welded, then the purchased parts went on.
+
+<Figure
+  n={5}
+  caption="Finished assembly"
+  images={[{ src: 'Suspension Completed.jpg', alt: 'Finished front suspension assembly' }]}
+/>
+
+<FileRow
+  href="https://new.express.adobe.com/webpage/wja0IBzZU85i3"
+  label="Full project write-up"
+  hint="Opens in a new tab"
+  external
+/>

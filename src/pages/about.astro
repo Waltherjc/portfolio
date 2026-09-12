@@ -1,0 +1,106 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHead from '../components/SectionHead.astro';
+import { site } from '../data/site';
+import { img } from '../lib/url';
+import { ratioOf } from '../data/imageSizes';
+---
+
+<Base
+  title="About"
+  description="John Walther is a sophomore mechanical engineer at Vanderbilt University working on VU Motorsports and assistive technology."
+>
+  <div class="sheet sheet--wide about-top">
+    <div>
+      <h1 class="about-top__title">About</h1>
+      <hr class="rule rule--draw" />
+      <div class="about-top__bio">
+        {site.about.map((p) => <p>{p}</p>)}
+      </div>
+    </div>
+    <div class="portrait">
+      <img
+        src={img(site.headshot)}
+        alt={`Portrait of ${site.name}`}
+        style={`aspect-ratio:${ratioOf(site.headshot, 0.8)}`}
+        fetchpriority="high"
+        decoding="async"
+      />
+    </div>
+  </div>
+
+  <section class="sheet sheet--wide section">
+    <SectionHead>Education</SectionHead>
+    <div class="edu">
+      <div>
+        <div class="edu__school">{site.education.school}</div>
+        <p class="edu__degree">{site.education.degree}</p>
+        <p class="edu__meta">{site.education.expected}</p>
+      </div>
+      <div>
+        <div class="edu__group">
+          <span class="edu__label">Minors</span>
+          {site.education.minors.map((m) => <p class="edu__item">{m}</p>)}
+        </div>
+        <div class="edu__group">
+          <span class="edu__label">Scholarships</span>
+          {site.education.honors.map((h) => <p class="edu__item">{h}</p>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet sheet--wide section">
+    <SectionHead note="Most recent first">Experience</SectionHead>
+    <table class="revtable">
+      <thead>
+        <tr>
+          <th>REV</th>
+          <th>DATE</th>
+          <th>DESCRIPTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          site.revisions.map((r) => (
+            <tr>
+              <td class="revtable__rev">{r.rev}</td>
+              <td class="revtable__date">{r.date}</td>
+              <td>
+                <div class="revtable__title">{r.title}</div>
+                <p class="revtable__org">{r.org}</p>
+                {r.note && <p class="revtable__note">{r.note}</p>}
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </section>
+
+  <section class="sheet sheet--wide section">
+    <SectionHead>Awards</SectionHead>
+    {
+      site.awards.map((a) => (
+        <div>
+          <div class="award__title">{a.title}</div>
+          <p class="award__detail">{a.detail}</p>
+        </div>
+      ))
+    }
+  </section>
+
+  <section class="sheet sheet--wide section">
+    <SectionHead>Clubs and organizations</SectionHead>
+    <div class="orglist">
+      {
+        site.organizations.map((o) => (
+          <div class="orglist__row">
+            <span class="orglist__name">{o.org}</span>
+            <span class="orglist__detail">{o.detail}</span>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Base>

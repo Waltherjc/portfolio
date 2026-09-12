@@ -1,0 +1,28 @@
+---
+import { img } from '../lib/url';
+import { ratioOf } from '../data/imageSizes';
+
+// `images` is an array of { src, alt }. Figure numbers are assigned per page
+// by a counter passed in as `n`.
+const { images, caption, n } = Astro.props;
+---
+
+<figure class="figure">
+  <div class="figure__images" data-count={images.length}>
+    {
+      images.map((im) => (
+        <img
+          src={img(im.src)}
+          alt={im.alt}
+          loading="lazy"
+          decoding="async"
+          style={`aspect-ratio:${ratioOf(im.src)}`}
+        />
+      ))
+    }
+  </div>
+  <figcaption class="figure__caption">
+    <span class="figure__no">FIG. {n}</span>
+    <span>{caption}</span>
+  </figcaption>
+</figure>

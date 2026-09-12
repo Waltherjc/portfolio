@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PartRow from '../../components/PartRow.astro';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base
+  title="Work"
+  description="Formula SAE oil tank, adapted shower chair, syringe pump, Formula Student suspension and roll cage."
+>
+  <div class="sheet sheet--wide" style="padding-block: clamp(2.5rem, 7vw, 4.5rem) 0;">
+    <h1 class="about-top__title">Work</h1>
+    <hr class="rule rule--draw" />
+    <p style="max-width: var(--measure); color: var(--graphite); font-size: 1.15rem;">
+      Five projects, from a collegiate Formula SAE car to assistive technology built in a weekend.
+      Each one covers the design decisions, the iterations that failed, and how the part was actually
+      made.
+    </p>
+  </div>
+
+  <section class="sheet sheet--wide section">
+    <div class="parts">
+      {projects.map((p, i) => <PartRow project={p} index={i} />)}
+    </div>
+  </section>
+</Base>

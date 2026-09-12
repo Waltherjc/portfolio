@@ -1,0 +1,97 @@
+---
+title: Syringe Pump
+summary: A 3D-printed, Arduino-driven syringe pump that dispenses from 5–20 mL syringes at a set flow rate, for a fraction of the cost of a commercial unit.
+order: 3
+hero: Syringe Pump Feature.jpg
+tags:
+  - Fusion 360
+  - Arduino
+  - 3D printing
+  - Mechatronics
+meta:
+  - field: TOOLS
+    value: Fusion 360, Arduino, FDM printing
+  - field: SCOPE
+    value: Mechanism, electronics, enclosure
+---
+
+import Figure from '../../components/Figure.astro';
+import Embed from '../../components/Embed.astro';
+import FileRow from '../../components/FileRow.astro';
+
+Syringe pumps are used in laboratories for microfluidic devices and in medical settings to administer medicine and nutrients. Calibration matters — a mis-set pump can cost a life. Commercial programmable pumps are expensive even in basic configurations, which makes a well-built DIY pump a genuinely useful alternative.
+
+## Features
+
+- **Linear actuator.** A coupler and lead screw convert the stepper motor's rotation into linear travel of the syringe plunger.
+- **Fits several syringe sizes.** Aligning the plunger flange and barrel flange to slits in the carriage and modified end support accommodates syringes of different diameters.
+- **External controls.** An LED, an ON/OFF button, a potentiometer, and an LCD sit on the enclosure shell. The button starts the motor, the potentiometer sets flow rate, and the LCD shows flow rate and time remaining. The LED reads green while running, yellow while paused, and red once all liquid is dispensed.
+
+## How to operate
+
+1. Fill the syringe and seat it in the holders.
+2. Check the ON/OFF button next to the LED is pressed in (OFF), then plug in the power cord. The LED turns yellow.
+3. For a preset rate, turn the potentiometer fully left (Flow Rate: 0) or fully right (Flow Rate: 100). The preset is set in the Arduino code, which computes the steps per second the motor needs. Press ON/OFF to run at that fixed speed.
+4. To adjust on the fly, start with the knob fully left or right, press ON/OFF, then turn the knob to the rate you want.
+5. Read flow rate and the countdown off the LCD. Green means running, yellow means the rate is zero with liquid remaining, red means the pump has reached the end of its stroke.
+
+## Bill of materials
+
+<p class="table-caption">Off-the-shelf parts</p>
+
+| Item | Part | Qty |
+| --- | --- | --- |
+| 1 | V slot | 1 |
+| 2 | NEMA 17 motor | 1 |
+| 3 | M3 × 10 mm bolt | 4 |
+| 4 | Flexible coupler | 1 |
+| 5 | M5 × 8 mm bolt | 8 |
+| 6 | M5 tee nut | 8 |
+| 7 | 8 × 8 × 250 mm lead screw | 1 |
+| 8 | Lead screw lock collar | 2 |
+| 9 | 8 × 200 mm linear rod | 1 |
+| 10 | Linear rod lock collar | 2 |
+| 11 | Flanged ball bearing | 2 |
+| 12 | Through nut 8×8-4 | 1 |
+| 13 | M3 × 8 mm thread forming screw | 4 |
+| 14 | LM8UU linear bearing | 1 |
+| 15 | 9.5 mm push button | 1 |
+| 16 | 5 mm LED | 1 |
+| 17 | Potentiometer | 1 |
+| 18 | LCD screen | 1 |
+| 19 | 20 mL syringe | 1 |
+
+<p class="table-caption">3D printed parts</p>
+
+| Item | Part | Qty |
+| --- | --- | --- |
+| 20 | Motor mounting plate | 1 |
+| 21 | Carriage | 1 |
+| 22 | Syringe support | 1 |
+| 23 | Plunger support | 1 |
+| 24 | End support | 1 |
+| 25 | Enclosure shell | 1 |
+| 26 | Enclosure drawer | 1 |
+| 27 | Cord hole filler | 1 |
+| 28 | Button gap filler | 1 |
+
+## CAD model
+
+<Embed
+  src="https://vanderbilt643.autodesk360.com/shares/public/SH512d4QTec90decfa6e1faab3ee761fd268?mode=embed"
+  title="Syringe pump CAD model, Autodesk Fusion"
+/>
+
+<Figure
+  n={1}
+  caption="Renderings and wiring layout"
+  images={[
+    { src: 'Syringe Pump Rendering 1.png', alt: 'Rendered view of the assembled syringe pump' },
+    { src: 'Syringe Pump Rendering 2.png', alt: 'Second rendered view of the syringe pump' },
+    { src: 'Syringe Pump Wiring.png', alt: 'Wiring diagram for the syringe pump electronics' },
+  ]}
+/>
+
+## Arduino code
+
+<FileRow href="assets/Code_for_Motor.ino" label="Code_for_Motor.ino" />

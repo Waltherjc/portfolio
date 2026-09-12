@@ -1,0 +1,16 @@
+---
+// The bordered field in the corner of a drawing that records who drew it and
+// under what conditions. Field names are uppercase per drawing convention.
+const { rows, class: cls = '' } = Astro.props;
+---
+
+<div class={`titleblock ${cls}`}>
+  {
+    rows.map((r) => (
+      <div class="titleblock__row">
+        <span class="titleblock__field">{r.field}</span>
+        <span class="titleblock__value">{r.value}</span>
+      </div>
+    ))
+  }
+</div>

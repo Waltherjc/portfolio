@@ -1,0 +1,67 @@
+---
+title: Formula Student Roll Cage
+summary: A roll cage built from straight 1 in square and round tube — wire-prototyped on the car, then notched, bent and MIG welded to a safety spec.
+order: 5
+hero: John Walther Roll Cage.jpg
+tags:
+  - Fusion 360
+  - Welding
+  - Tube fabrication
+meta:
+  - field: TOOLS
+    value: Autodesk Fusion, tube bender, MIG welding
+  - field: SCOPE
+    value: CAD modification, prototype, fabrication
+---
+
+import Figure from '../../components/Figure.astro';
+import FileRow from '../../components/FileRow.astro';
+
+## Introduction
+
+The goal was to assemble a roll cage for a high school Formula Student car. It had to meet safety standards and accommodate the driver's height. This cage became the foundation for the rest of the car built in later years.
+
+Work started with CAD in Autodesk Fusion. Thin flexible wire was then used to outline the cage directly on the existing base, before tube was cut, notched, bent and MIG welded to match.
+
+## CAD modification
+
+The starting point was another school's CAD design. Because the base of the cage had been assembled in a previous year under different parameters, that design needed reworking.
+
+Most of the work was moving tube-to-tube connection points to line up with the cross-sectional beams already in the base, which meant shortening, lengthening, or re-curving many members.
+
+After that, the focus shifted to how curved tube meets square tube. Every joint angle had to be documented out of the CAD so the parts could actually be built. The hardest node joined three circular tubes to one square tube; it took several iterations to get all of them meeting at a single point so the node distributes force properly.
+
+## Wire prototype
+
+Using the modified CAD, I built a wire prototype on top of the existing cage base to confirm the measurements. Thin pliable wire was cut, bent and taped into position. Straightening a wire member afterwards gives you the exact cut length for the real tube, which made the translation to steel far more reliable.
+
+<Figure
+  n={1}
+  caption="Wire prototype used to verify measurements"
+  images={[{ src: 'Wire Roll Cage.jpg', alt: 'Wire prototype of the roll cage on the car base' }]}
+/>
+
+## Fabrication
+
+Starting from straight 1 in square and circular tube, pieces were cut on a chop saw to lengths taken off the straightened prototype wire. Curves went into the circular tube on a tube bender. Square tube was bent differently: the target angle was cut out of the material first, then the tube closed onto itself. Measuring half the angle out from each side means the two faces are equal in length when the gap closes, which makes the weld far easier. Air grinders and dremels brought the tube ends down to a flush fit.
+
+<Figure
+  n={2}
+  caption="MIG welding the prepared tubes"
+  images={[{ src: 'Roll Cage Welding.jpg', alt: 'MIG welding the roll cage tubes' }]}
+/>
+
+MIG welding was chosen for availability and speed. Everything was tack welded into position first, so anything out of place could be corrected without wasting material, then covered with full welds once the geometry was confirmed.
+
+<Figure
+  n={3}
+  caption="Completed cage"
+  images={[{ src: 'John Walther Roll Cage.jpg', alt: 'John Walther with the completed roll cage' }]}
+/>
+
+<FileRow
+  href="https://new.express.adobe.com/webpage/wja0IBzZU85i3"
+  label="Full project write-up"
+  hint="Opens in a new tab"
+  external
+/>

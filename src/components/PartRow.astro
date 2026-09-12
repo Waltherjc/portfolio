@@ -1,0 +1,35 @@
+---
+import { img, url } from '../lib/url';
+
+const { project, index } = Astro.props;
+const { data } = project;
+const no = String(index + 1).padStart(2, '0');
+---
+
+<a class="part" href={url(`portfolio/${project.id}`)}>
+  <span class="part__no">{no}</span>
+
+  {
+    data.hero ? (
+      <img class="part__thumb" src={img(data.hero)} alt={`${data.title} preview`} loading="lazy" decoding="async" />
+    ) : (
+      // A field struck through with a single diagonal marks a view that does
+      // not exist yet — the drawing convention for a void field.
+      <span class="part__thumb part__thumb--void" role="img" aria-label="No photograph available yet" />
+    )
+  }
+
+  <span class="part__body">
+    <span class="part__title">{data.title}</span>
+    <p class="part__summary">{data.summary}</p>
+    {
+      data.tags?.length > 0 && (
+        <span class="part__tags">
+          {data.tags.map((t) => (
+            <span class="tag">{t}</span>
+          ))}
+        </span>
+      )
+    }
+  </span>
+</a>

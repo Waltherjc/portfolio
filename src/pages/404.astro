@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib/url';
+---
+
+<Base title="Page not found">
+  <div class="sheet sheet--wide notfound">
+    <div class="notfound__code">404</div>
+    <hr class="rule" />
+    <h1 style="font-size: clamp(1.6rem, 4vw, 2.1rem); margin-bottom: 1rem;">
+      This sheet does not exist
+    </h1>
+    <p style="max-width: var(--measure); color: var(--graphite);">
+      The page you asked for is not part of this set. The work index lists everything here.
+    </p>
+    <div class="hero__actions">
+      <a class="btn btn--solid" href={url('portfolio')}>See the work</a>
+      <a class="btn btn--outline" href={url('/')}>Home</a>
+    </div>
+  </div>
+</Base>

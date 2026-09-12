@@ -1,0 +1,8 @@
+---
+const { note } = Astro.props;
+---
+
+<div class="section__head">
+  <h2 class="section__title"><slot /></h2>
+  {note && <span class="section__note">{note}</span>}
+</div>
