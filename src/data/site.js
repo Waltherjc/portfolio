@@ -1,6 +1,6 @@
 export const site = {
   name: 'John Walther',
-  role: 'Mechanical engineering student',
+  role: 'Mechanical Engineering Student',
   // One plain line, written for a recruiter skimming: what he does, with what.
   summary:
     'I design and build vehicle hardware — oil systems, suspension, roll structures — in SolidWorks and Fusion, then cut, bend and weld the parts myself.',
