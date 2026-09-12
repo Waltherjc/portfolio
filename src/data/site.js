@@ -9,9 +9,9 @@ export const site = {
   // Add contact links here and they appear in the footer automatically.
   // Left empty rather than filled with a placeholder address.
   contact: [
-    // { label: 'Email', href: 'mailto:you@example.com' },
-    // { label: 'LinkedIn', href: 'https://www.linkedin.com/in/...' },
-    // { label: 'GitHub', href: 'https://github.com/Waltherjc' },
+    { label: 'Email', href: 'mailto:johncwalther@yahoo.com' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/john-c-walther/' },
+    { label: 'GitHub', href: 'https://github.com/Waltherjc' },
   ],
   headshotSquare: 'John Walther Headshot Square.jpg',
 
