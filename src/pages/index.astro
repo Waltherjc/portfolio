@@ -33,21 +33,4 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
     </div>
   </section>
 
-  <section class="sheet sheet--wide section">
-    <SectionHead>What I work with</SectionHead>
-    <div class="skills">
-      {
-        site.skills.map((g) => (
-          <div>
-            <h3 class="skills__heading">{g.group}</h3>
-            <ul class="skills__list">
-              {g.items.map((s) => (
-                <li>{s}</li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
-    </div>
-  </section>
 </Base>
