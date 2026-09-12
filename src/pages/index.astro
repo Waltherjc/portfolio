@@ -19,15 +19,15 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
       <hr class="rule rule--full rule--draw" />
       <p class="hero__summary">{site.summary}</p>
       <div class="hero__actions">
-        <a class="btn btn--solid" href={url('portfolio')}>See the work</a>
-        <a class="btn btn--outline" href={url('about')}>About me</a>
+        <a class="btn btn--solid" href={url('portfolio')}>See the Work</a>
+        <a class="btn btn--outline" href={url('about')}>About Me</a>
       </div>
     </div>
     <TitleBlock rows={site.titleBlock} />
   </div>
 
   <section class="sheet sheet--wide section">
-    <SectionHead note={`${projects.length} projects`}>Selected work</SectionHead>
+    <SectionHead note={`${projects.length} projects`}>Selected Work</SectionHead>
     <div class="parts">
       {projects.map((p, i) => <PartRow project={p} index={i} />)}
     </div>
