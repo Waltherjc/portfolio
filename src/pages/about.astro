@@ -55,7 +55,6 @@ import { ratioOf } from '../data/imageSizes';
     <table class="revtable">
       <thead>
         <tr>
-          <th>REV</th>
           <th>DATE</th>
           <th>DESCRIPTION</th>
         </tr>
@@ -64,7 +63,6 @@ import { ratioOf } from '../data/imageSizes';
         {
           site.revisions.map((r) => (
             <tr>
-              <td class="revtable__rev">{r.rev}</td>
               <td class="revtable__date">{r.date}</td>
               <td>
                 <div class="revtable__title">{r.title}</div>
