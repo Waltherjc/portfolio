@@ -10,9 +10,12 @@ const desc =
   description ??
   'Engineering portfolio of John Walther — mechanical engineering at Vanderbilt University, Formula SAE, CAD and metal fabrication.';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const path = Astro.url.pathname.replace(/\/$/, '');
-const isWork = path.includes('/portfolio');
-const isAbout = path.endsWith('/about');
+const route = path.startsWith(base) ? path.slice(base.length) : path;
+
+const isWork = route.startsWith('/portfolio');
+const isAbout = route === '/about';
 
 const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://waltherjc.github.io');
 const year = new Date().getFullYear();
