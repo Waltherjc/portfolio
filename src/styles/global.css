@@ -869,13 +869,39 @@ main {
 }
 
 .portrait {
-  border: 1px solid var(--line);
+  border: 1px solid var(--ink);
+  background: var(--panel);
   overflow: hidden;
+  margin: 0;
 }
 
 .portrait img {
   width: 100%;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: 50% 22%;
+}
+
+.portrait__caption {
+  border-top: 1px solid var(--line);
+  padding: 0.7rem 0.95rem;
+}
+
+.portrait__field {
+  display: block;
+  font-family: var(--display);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  color: var(--graphite);
+  margin-bottom: 0.2rem;
+}
+
+.portrait__value {
+  display: block;
+  font-family: var(--display);
+  font-size: 0.93rem;
+  font-weight: 500;
 }
 
 @media (max-width: 63.99rem) {
