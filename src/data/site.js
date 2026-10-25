@@ -9,7 +9,7 @@ export const site = {
   // Add contact links here and they appear in the footer automatically.
   // Left empty rather than filled with a placeholder address.
   contact: [
-    { label: 'Email', href: 'mailto:johncwalther@yahoo.com' },
+    { label: 'Email', href: 'mailto:john.c.walther@vanderbilt.edu' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/john-c-walther/' },
     { label: 'GitHub', href: 'https://github.com/Waltherjc' },
   ],
@@ -33,7 +33,7 @@ export const site = {
   education: {
     school: 'Vanderbilt University',
     degree: 'BE Mechanical Engineering',
-    expected: 'Expected May 2029',
+    expected: 'Expected May 2029 · GPA 4.0/4.0',
     minors: ['Innovation & Design Strategy', 'Digital Fabrication', 'Engineering Management'],
     honors: ['National Merit Scholarship', 'Vanderbilt University Merit Scholarship'],
   },
@@ -42,28 +42,31 @@ export const site = {
   revisions: [
     {
       rev: 'D',
-      date: 'Jun – Aug 2026',
-      title: 'Undergraduate Researcher',
-      org: 'Welding Automation Lab, Vanderbilt University',
+      date: 'Summer 2026 – present',
+      title: 'Research Assistant',
+      org: 'Vanderbilt University Welding Automation Lab (VUWAL)',
+      note: 'Friction stir welding of thin nitinol sheet. Funded by the Frist Center for Autism and Innovation Summer Internship Program.',
     },
     {
       rev: 'C',
-      date: 'Jun – Aug 2026',
-      title: 'Undergraduate Researcher',
-      org: 'The Frist Center for Autism and Innovation, Vanderbilt University',
+      date: 'Summer 2026',
+      title: 'Summer Intern',
+      org: `The Wond'ry, Vanderbilt's Center for Innovation and Design`,
+      note: 'Helped design Launchpad Career Studio, a summer workshop for college students, working with Professor Kevin Galloway.',
     },
     {
       rev: 'B',
-      date: 'Jul – Aug 2025',
+      date: 'Summer 2025',
       title: 'Engineering Intern',
       org: 'International Motor Sports Association (IMSA)',
-      note: 'Motul SportsCar Grand Prix',
+      note: 'Motul SportsCar Grand Prix, Road America. Assisted with technical and on-track inspections, shadowing Scott Ellison (lead IMSA Technical Compliance & Scrutineering Manager).',
     },
     {
       rev: 'A',
-      date: 'Jun 2023 – Jul 2025',
+      date: 'Summer 2023 – Summer 2025',
       title: 'Program Assistant',
-      org: 'Northern Suburban Special Recreation Association (NSSRA)',
+      org: 'Northern Suburban Special Recreation Association',
+      note: 'Worked one-on-one with individuals with special needs during social and athletic activities.',
     },
   ],
 
@@ -73,10 +76,10 @@ export const site = {
   ],
 
   organizations: [
-    { org: 'VU Motorsports — Formula SAE', detail: 'Member, 2025 – present' },
-    { org: 'Tikkun Olam Makers (TOM): Vanderbilt', detail: 'Member, 2025 – present' },
-    { org: 'Vanderbilt Club Baseball', detail: 'Vice President, 2026 – present · Member since 2025' },
+    { org: 'VU Motorsports — Formula SAE', detail: 'New Member Lead, 2026 – present · Member since 2025' },
     { org: 'VUcept', detail: 'Freshman orientation leader, 2026 – present' },
+    { org: 'Tikkun Olam Makers (TOM): Vanderbilt', detail: 'Member, 2025 – present' },
+    { org: 'Vanderbilt Club Baseball', detail: 'Vice President, 2026 – present · Pitcher since 2025' },
   ],
 
   awards: [
