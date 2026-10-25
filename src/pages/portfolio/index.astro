@@ -14,7 +14,7 @@ const projects = (await getCollection('projects')).sort((a, b) => a.data.order -
     <h1 class="about-top__title">Work</h1>
     <hr class="rule rule--draw" />
     <p style="max-width: var(--measure); color: var(--graphite); font-size: 1.15rem;">
-      Five projects, from a collegiate Formula SAE car to assistive technology built in a weekend.
+      {projects.length} projects, from a collegiate Formula SAE car to assistive technology built in a weekend.
       Each one covers the design decisions, the iterations that failed, and how the part was actually
       made.
     </p>
