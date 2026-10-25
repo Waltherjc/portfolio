@@ -2,7 +2,7 @@
 title: Formula SAE Oil Tank
 summary: A 2 L dry-sump oil tank for a Yamaha YFZ450S engine, packaged around an air intake change that left no room for the factory tank.
 order: 1
-hero: null
+hero: Oil-Tank-Side-2.jpg
 tags:
   - SolidWorks
   - Sheet metal
@@ -15,6 +15,8 @@ meta:
   - field: SCOPE
     value: Design, packaging, prototype
 ---
+
+import Figure from '../../components/Figure.astro';
 
 ## Introduction
 
@@ -30,15 +32,58 @@ All CAD was done in SolidWorks so the part could drop straight into the full car
 
 The first location was behind the engine and ahead of the rear differential: low to the ground and large enough for the required volume. Two problems killed it. The flat bottom stranded a lot of oil below the pickup tubes, which I fixed by angling the floor. Then the team changed the rear differential and the space shrank.
 
+<Figure
+  n={1}
+  caption="Location 1 — tank designed to sit behind the engine, before and after the floor was angled"
+  images={[
+    { src: 'Oil-Tank-Behind-CAD-1.jpg', alt: 'CAD of the oil tank shaped for the space behind the engine' },
+    { src: 'Oil-Tank-Behind-CAD-2.jpg', alt: 'Revised CAD of the tank for location 1 with a stepped upper section' },
+  ]}
+/>
+
+<Figure
+  n={2}
+  caption="The target volume behind the engine and ahead of the rear differential"
+  images={[
+    { src: 'Oil-Tank-Behind-1.jpg', alt: 'Chassis viewed from behind the engine, showing the available volume' },
+    { src: 'Oil-Tank-Behind-2.jpg', alt: 'Rear of the chassis with the differential uprights and drive chain in place' },
+    { src: 'Oil-Tank-Behind-3.jpg', alt: 'Wider view of the rear of the chassis with the engine mounted' },
+  ]}
+/>
+
 ### Location 2 — beside the engine
 
 The tank then moved to the right side of the car, tucked between the engine and the roll cage. The angled floor survived, but new problems appeared. To hit the volume target, the face nearest the roll cage had to become complex enough to make fabrication impractical. The bottom of the tank also became too narrow for the filter on the oil pickup tubes. Worst of all, too much of the tank ended up above the engine, which would have flooded it.
+
+<Figure
+  n={3}
+  caption="Location 2 — the tank narrowed to clear the roll cage, leaving too little width at the base for the pickup filter"
+  images={[{ src: 'Oil-Tank-Side-CAD-1.jpg', alt: 'CAD of the oil tank shaped to fit beside the engine' }]}
+/>
+
+<Figure
+  n={4}
+  caption="The space between the engine and the roll cage on the right side of the car"
+  images={[
+    { src: 'Oil-Tank-Side-1.jpg', alt: 'Right side of the chassis showing the exhaust routing past the engine' },
+    { src: 'Oil-Tank-Side-3.jpg', alt: 'Side view of the chassis and engine in the shop' },
+  ]}
+/>
 
 ### Location 3 — ahead of the engine
 
 The final location sat ahead of the engine and behind the firewall separating driver from powertrain. Most of the tank fell below the engine, the floor could be pitched, and the base was wide enough for the pickup tube filter. The car battery had been living there, but battery placement is far more flexible than oil tank placement, so it moved.
 
 In this iteration the oil pickup tube sits slightly above the floor to clear a roll cage tube. One side is slanted to match the firewall with 0.25 in of clearance so vibration cannot chafe it, and the outboard face follows the roll cage profile to use every available millimetre without interfering with anything else.
+
+<Figure
+  n={5}
+  caption="Location 3 — the final shape, with one face slanted to the firewall and the outboard face following the roll cage"
+  images={[
+    { src: 'Oil-Tank-Front-CAD-1.jpg', alt: 'CAD of the final oil tank design viewed from the outboard side' },
+    { src: 'Oil-Tank-Front-CAD-2.jpg', alt: 'CAD of the final oil tank design viewed from the front' },
+  ]}
+/>
 
 ### Cardboard prototype
 
@@ -49,3 +94,12 @@ Working from the finished CAD, I cut each face of the tank out of cardboard to c
 With the cardboard model confirming the measurements, fabrication started in thin sheet aluminium. Each side was cut separately so the angles could be fine-tuned, except the top and back, which were cut as one piece and bent to 90° on a sheet metal brake. Fitting the oil pickup tube meant cutting an elongated, filleted parallelogram out of one face; to avoid compromising the rest of the panel I drilled out the centre and filed back to the line.
 
 The pieces were cut and bent and ready to weld when the car design was overhauled. The new air intake was judged not ready for competition and was replaced with one routed outside the roll cage — which let the OEM oil tank fit again, and that is what the car ran.
+
+<Figure
+  n={6}
+  caption="The OEM Yamaha tank the car ultimately ran, with its pickup and return lines"
+  images={[
+    { src: 'Oil-Tank-1.jpg', alt: 'OEM Yamaha oil tank held above the workbench, showing the filler and fittings' },
+    { src: 'Oil-Tank-2.jpg', alt: 'OEM oil tank from the opposite side showing the pickup line and mounting tabs' },
+  ]}
+/>
