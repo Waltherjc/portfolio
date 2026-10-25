@@ -675,6 +675,12 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
 }
 
+/* A lone image does not need the full text column — capping it keeps the
+   page tight and stops simple views from dominating. */
+.figure__images[data-count='1'] {
+  max-width: 30rem;
+}
+
 .figure__images img {
   width: 100%;
   border: 1px solid var(--line);
