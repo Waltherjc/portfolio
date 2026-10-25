@@ -84,9 +84,9 @@ export const site = {
 
   awards: [
     {
-      title: '3rd Place, Efficiency — Formula SAE IC Michigan 2026',
+      title: 'VU Motorsports — 3rd Place, Efficiency, Formula SAE IC Michigan 2026',
       detail:
-        'Awarded for fuel use over the set distance, helped by running the lightest car at the competition by roughly 40 lb.',
+        'Team result. The car placed third for fuel used over the set distance, helped by running roughly 40 lb lighter than the rest of the field. I joined the team in 2025 and worked on chassis assembly and the oil system.',
     },
   ],
 };
