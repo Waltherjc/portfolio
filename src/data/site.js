@@ -3,7 +3,7 @@ export const site = {
   role: 'Mechanical Engineering Student',
   // One plain line, written for a recruiter skimming: what he does, with what.
   summary:
-    'I work on engineering projects to prepare myself for a career in automotive engineering.',
+    'I work on engineering projects to prepare myself for a career in automotive engineering. I have experience with SolidWorks and Fusion, prototyping strategies, and many machine shop tools',
   headshot: 'John Walther Headshot.jpg',
 
   // Add contact links here and they appear in the footer automatically.
