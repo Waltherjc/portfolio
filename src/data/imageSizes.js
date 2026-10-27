@@ -36,7 +36,8 @@ export const aspect = {
   "Syringe Pump Rendering 1.png": 1.787,
   "Syringe Pump Rendering 2.png": 1.7865,
   "Syringe Pump Wiring.png": 2.0894,
-  "Wire Roll Cage.jpg": 1.3333
+  "Wire Roll Cage.jpg": 1.3333,
+  "Roll-Cage-Hero.jpg": 1.7762,
 };
 
 export const ratioOf = (name, fallback = 1.5) => aspect[name] ?? fallback;
