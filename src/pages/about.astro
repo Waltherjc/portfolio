@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import SectionHead from '../components/SectionHead.astro';
 import { site } from '../data/site';
+import FileRow from '../components/FileRow.astro';
 import { img } from '../lib/url';
 ---
 
@@ -15,6 +16,7 @@ import { img } from '../lib/url';
       <hr class="rule rule--draw" />
       <div class="about-top__bio">
         {site.about.map((p) => <p>{p}</p>)}
+        <FileRow href="assets/John_Walther_Resume_Website.pdf" label="Download résumé (PDF)" />
       </div>
     </div>
     <figure class="portrait">
