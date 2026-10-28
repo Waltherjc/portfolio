@@ -62,6 +62,13 @@ export const site = {
       note: 'Motul SportsCar Grand Prix, Road America. Assisted with technical and on-track inspections, shadowing Scott Ellison (lead IMSA Technical Compliance & Scrutineering Manager).',
     },
     {
+      rev: 'B2',
+      date: 'Fall 2024 – Spring 2025',
+      title: 'Automotive Engineering Teaching Assistant',
+      org: 'New Trier Applied Arts Department',
+      note: 'Instructed MIG welding to beginners and assisted with projects on engines, electric go-karts and car parts.',
+    },
+    {
       rev: 'A',
       date: 'Summer 2023 – Summer 2025',
       title: 'Program Assistant',
